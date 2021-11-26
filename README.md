@@ -15,10 +15,10 @@ This dataset contains songs from years between 1961 to 2020 written by Bob Dylan
 Content
 There are 4 columns:
 
-release_year - year when song was released first time,
-album - name of the album where track occurs,
-title - title of the song,
-lyrics - lyrics of the track
+* release_year - year when song was released first time,
+* album - name of the album where track occurs,
+* title - title of the song,
+* lyrics - lyrics of the track
 Acknowledgements
 This dataset contains only songs that Bob Dylan himself has written and published.
 There's many songs that Bob Dylan only covered so I didn't include them because he's not the original author.
