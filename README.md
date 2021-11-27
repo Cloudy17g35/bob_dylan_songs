@@ -40,6 +40,12 @@ How distribution of Dylan's songs changed over the years?
 Is Dylan songs mostly positive, negative or neutral?
 
 
+
 I also made a wordclouds for all albums, tites and lyric using wordcloud module, link to documentation:
 
 https://amueller.github.io/word_cloud/auto_examples/index.html
+
+Here is full view of this project (github don't support wordclouds or plotly):
+
+https://www.kaggle.com/cloudy17/bob-dylan-songs-1961-2020
+
