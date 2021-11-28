@@ -45,13 +45,7 @@ Inspiration:
  I'm great Bob Dylan fan. I listen to his songs almost every
  day from many years. 
  I also play them and sing them so now 
- I decided to make dataset and play with them on this app as well.
-
-Ideas:
-
-* Which word is the most frequent? 
-* How distribution 
-of Dylan's songs changed over the years? 
+ I decided to make dataset and play with them on this app as well. 
 """)
 
 
@@ -74,7 +68,7 @@ fig.update_layout(font=dict(family='Lato', size=18, color='white'),
 
 st.plotly_chart(fig)
 
-st.write('Select album to see more information: ')
+st.write('Select album: ')
 
 # option might be select or unique album from dataset
 options = ['select'] + list(['select'] + list(set(df['album'].values)))
@@ -84,7 +78,13 @@ option = st.selectbox('Album name:', options)
 if option != 'select':
 
     st.write(f'you selected {option}')
-    st.dataframe(df[df['album'] == option])
+    selected_df = df[df['album'] == option]
+    st.dataframe(selected_df)
+    df_to_download = selected_df.to_csv().encode('utf8')
+
+    st.download_button('DOWNLOAD YOUR DATAFRAME', data=df_to_download,
+                       file_name=f'songs_from_album_{option}.csv',
+                       mime='text/csv')
 
 
 st.write("""If you want to generate wordcloud for particular year, select 
@@ -110,9 +110,9 @@ def make_wordcloud(year:int):
 
         for word in words:
 
-            word = (word.replace('’', "'").strip().replace(' ', '').
-                    replace(',', '').replace("'", '').replace('"', '')
-                    .replace(";", ""))
+            word = (word.strip().replace('’', "'").replace(' ', '').
+                    replace(',', '').replace('"', '').replace('”', '')
+                    .replace(";", "").replace('.',''))
 
             if word not in STOPWORDS:
                 clean.append(word)
