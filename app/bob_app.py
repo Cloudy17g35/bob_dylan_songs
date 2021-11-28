@@ -122,8 +122,7 @@ def make_wordcloud(year:int):
     wc: WordCloud = (WordCloud(min_font_size=10, max_font_size=60, width=800, height=500,
                                random_state=1,
                                colormap='rainbow',
-                               collocations=False,
-                               stopwords=STOPWORDS)
+                               collocations=False)
                     .generate_from_frequencies(frequency))
     return wc
 
@@ -145,14 +144,3 @@ if year in unique_years:
         )
 else:
     st.write(f"there's no songs for this year: {year}")
-
-
-
-
-
-
-
-
-
-
-
