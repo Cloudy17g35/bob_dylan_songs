@@ -83,7 +83,7 @@ if option != 'select':
     df_to_download = selected_df.to_csv().encode('utf8')
 
     st.download_button('DOWNLOAD YOUR DATAFRAME', data=df_to_download,
-                       file_name=f'songs_from_album_{option}.csv',
+                       file_name=f'songs_from_album_{"_".join(word for word in option.split())}.csv,
                        mime='text/csv')
 
 
