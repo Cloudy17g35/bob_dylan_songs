@@ -71,7 +71,7 @@ st.plotly_chart(fig)
 st.write('Select album: ')
 
 # option might be select or unique album from dataset
-options = ['select'] + list(['select'] + list(set(df['album'].values)))
+options = ['select'] + list(df['album'].unique)
 option = st.selectbox('Album name:', options)
 
 
