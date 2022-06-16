@@ -45,27 +45,6 @@ def make_wordcloud(frequency:Counter):
     return wc
 
 
-# year: int = st.slider('choose year:', 
-#                       min_value=1961, 
-#                       max_value=2020)
-
-# unique_years: set = set(df['release_year'].values)
-
-# if year in unique_years:
-#     export_wordcloud_image:str = 'download.png'
-#     cloud = make_wordcloud(year).to_file(export_wordcloud_image)
-#     st.image(export_wordcloud_image)
-
-#     with open(export_wordcloud_image, 'rb') as file:
-#         st.download_button(
-#             label='DOWNLOAD ME!',
-#             data=file,
-#             file_name='download.png',
-#             mime='image/png'
-#         )
-# else:
-#     st.write(f"there's no songs for this year: {year}")
-
 def get_counter(lyrics_list):
     lst = []
     for lyric in lyrics_list:
