@@ -6,7 +6,7 @@ from enum import Enum
 class TextDescription(Enum):
     
     HEADER = """<h1 style='text-align: center;
-color: blue;'>Bob Dylan Songs App</h1>"""
+color: blue;'>BOB DYLAN SONGS APP</h1>"""
 
     IMAGE = 'picture.png'
 
@@ -41,15 +41,18 @@ I decided to make dataset and play with them on this app as well. """
     
     PICTURE = 'picture.png'
     
-    DATASET = '<b>Dataset:</b>'
+    DATASET = """<h2 style='text-align: center;
+color: blue;'>DATASET</h2>"""
     
-    PLOT_SUBHEADER = """<h1 style='text-align: center;
-color: blue;'>SONGS DISTRIBUTION BY YEARS</h1>"""
+    PLOT_SUBHEADER = """<h2 style='text-align: center;
+color: blue;'>SONGS DISTRIBUTION BY YEARS</h2>"""
     
     ALBUM_SELECTION = 'Select album: '
     
     DOWNLOAD_DATAFRAME = 'DOWNLOAD YOUR DATAFRAME'
     
+    WORDCLOUD_SUBHEADER = """<h2 style='text-align: center;
+color: blue;'>WORDCLOUD</h2>"""
     WORDCOUD_DESCRIPTION = """If you want to generate wordcloud for particular year, select 
 this year on the slider, wordcloud will be generated 
 automatically"""
